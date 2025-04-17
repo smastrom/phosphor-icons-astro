@@ -24,13 +24,13 @@
       "name": "Simone Mastromattei",
       "email": "smastrom@proton.me"
    },
+   "sideEffects": false,
+   "type": "module",
    "exports": {
-      ".": {
-         "import": "./dist/index.mjs",
-         "types": "./dist/index.d.ts"
-      }
+      ".": "./dist/index.mjs",
+      "./package.json": "./package.json"
    },
-   "main": "dist/index.js",
+   "main": "dist/index.mjs",
    "module": "dist/index.mjs",
    "types": "dist/index.d.ts",
    "files": [
