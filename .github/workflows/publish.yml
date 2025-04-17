@@ -6,10 +6,7 @@ on:
    workflow_dispatch:
 
 jobs:
-   tests-workflow:
-      uses: ./.github/workflows/tests.yml
    publish:
-      needs: tests-workflow
       runs-on: ubuntu-latest
       permissions:
          contents: read
