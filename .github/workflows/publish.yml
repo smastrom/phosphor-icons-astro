@@ -1,0 +1,30 @@
+name: Publish to NPM
+
+on:
+   push:
+      tags: ['v*']
+   workflow_dispatch:
+
+jobs:
+   publish:
+      runs-on: ubuntu-latest
+      permissions:
+         contents: read
+         id-token: write
+      steps:
+         - uses: actions/checkout@v4
+         - uses: oven-sh/setup-bun@v2
+         - uses: actions/setup-node@v3
+           with:
+              node-version: '22'
+              registry-url: 'https://registry.npmjs.org'
+         - name: Install dependencies
+           run: bun install
+         - name: Build package
+           run: bun run build
+         - name: Pack
+           run: npm pack
+         - name: Publish
+           run: npm publish *.tgz --provenance --access public
+           env:
+              NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

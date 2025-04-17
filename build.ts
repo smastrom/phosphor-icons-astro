@@ -146,8 +146,8 @@ export async function build() {
       await Bun.write('dist/index.d.ts', indexDts)
       console.log(`📦 dist/index.d.ts built!`)
 
-      await Bun.write('dist/index.js', indexJs)
-      console.log(`📦 dist/index.js built!`)
+      await Bun.write('dist/index.mjs', indexJs)
+      console.log(`📦 dist/index.mjs built!`)
 
       process.exit(0)
    } catch (error) {
