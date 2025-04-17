@@ -2,7 +2,7 @@
    "name": "astro-phosphor-icons",
    "version": "2.1.1",
    "private": false,
-   "description": "Phosphor Icons for Astro with great DX and the same @phosphor-icons/* API.",
+   "description": "Phosphor Icons for Astro with great DX and the same official @phosphor-icons API.",
    "keywords": [
       "phosphor-icons",
       "astro-phosphor-icons",
@@ -27,7 +27,6 @@
    "exports": {
       ".": {
          "import": "./dist/index.mjs",
-         "require": "./dist/index.js",
          "types": "./dist/index.d.ts"
       }
    },
