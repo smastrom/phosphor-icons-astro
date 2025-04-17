@@ -1,6 +1,6 @@
 import path from 'node:path'
 
-import { icons as PhosphorIcons, type IconStyle, type IconEntry } from '@phosphor-icons/core'
+import { IconStyle, icons as PhosphorIcons, type IconEntry } from '@phosphor-icons/core'
 
 /**
  * ***********************************************
@@ -61,7 +61,8 @@ export declare function ${fileName}(__props: ${AstroPhosphorIconPropsType}): any
 const astro = String.raw
 
 async function getSvgHtml(weight: IconStyle, identifier: IconEntry['name']) {
-   const fileName = weight === 'regular' ? `${identifier}.svg` : `${identifier}-${weight}.svg`
+   const fileName =
+      weight === IconStyle.REGULAR ? `${identifier}.svg` : `${identifier}-${weight}.svg`
 
    const filePath = path.join(
       process.cwd(),
@@ -75,7 +76,6 @@ async function getSvgHtml(weight: IconStyle, identifier: IconEntry['name']) {
 
 function getAstroComponentContents(map: WeightMap) {
    return astro`---
-import type { HTMLAttributes } from "astro/types";
 import type { __AstroPhosphorIconProps } from "../index.d.ts";
 
 const weights = new Map<__AstroPhosphorIconProps["weight"], string>([
