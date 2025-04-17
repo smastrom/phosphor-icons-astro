@@ -1,0 +1,53 @@
+{
+   "name": "astro-phosphor-icons",
+   "version": "2.1.1",
+   "private": false,
+   "description": "Phosphor Icons for Astro with the great DX and the same original @phosphor-icons/* API.",
+   "keywords": [
+      "phosphor-icons",
+      "astro-phosphor-icons",
+      "astro-component",
+      "withastro",
+      "icon",
+      "icons"
+   ],
+   "homepage": "https://github.com/smastrom/astro-phosphor-icons",
+   "bugs": {
+      "url": "https://github.com/smastrom/astro-phosphor-icons/issues"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/smastrom/astro-phosphor-icons.git"
+   },
+   "license": "MIT",
+   "author": {
+      "name": "Simone Mastromattei",
+      "email": "smastrom@proton.me"
+   },
+   "main": "dist/index.js",
+   "module": "dist/index.mjs",
+   "types": "dist/index.d.ts",
+   "exports": {
+      ".": {
+         "import": "./dist/index.mjs",
+         "require": "./dist/index.js",
+         "types": "./dist/index.d.ts"
+      }
+   },
+   "files": [
+      "dist/*"
+   ],
+   "scripts": {
+      "build": "bun build.ts",
+      "postbuild": "npm pack"
+   },
+   "devDependencies": {
+      "@types/bun": "^1.2.10",
+      "@types/node": "^22.14.1",
+      "astro": "^5.7.3",
+      "prettier": "^3.5.3"
+   },
+   "dependencies": {
+      "@phosphor-icons/core": "^2.1.1"
+   }
+}

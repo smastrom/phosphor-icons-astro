@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.tgz
+bun.lockb
+bun-lock.json
+bun-lock.yaml
+bun-lock.yml
+bun-lock.json5
+bun-lock.json5
+dist
+*.tgz
